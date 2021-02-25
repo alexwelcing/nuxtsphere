@@ -32,7 +32,7 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  module.exports = {
+  module,exports = {
     modules: ['nuxt-ghost'],
 
     ghost: {
