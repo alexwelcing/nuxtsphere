@@ -32,17 +32,28 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-  ],
+  module.exports = {
+    modules: ['nuxt-ghost'],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+    ghost: {
+      /**
+       * Your Ghost url
+       */
+      url: 'https://demo.ghost.io/ghost',
 
+      /**
+       * Your content api key
+       */
+      key: '22444f78447824223cefc48062',
+
+      /**
+       * Version
+       * default: v3
+       */
+      version: 'v3',
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
-}
+};
