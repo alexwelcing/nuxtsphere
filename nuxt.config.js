@@ -32,28 +32,24 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  module,exports = {
-    modules: ['nuxt-ghost'],
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
+  ],
 
-    ghost: {
-      /**
-       * Your Ghost url
-       */
-      url: 'https://demo.ghost.io/ghost',
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    'nuxt=ghost'
+  ],
 
-      /**
-       * Your content api key
-       */
-      key: '22444f78447824223cefc48062',
-
-      /**
-       * Version
-       * default: v3
-       */
-      version: 'v3',
-    },
+  ghost: {
+    url: 'https://nuxtsphere.vercel.app',
+    key: '22444f78447824223cefc48062',
+    version: 'v3'
   },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
-};
+}
